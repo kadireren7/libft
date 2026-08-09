@@ -6,7 +6,7 @@
 /*   By: kaaltint@student.42istanbul.com.tr         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/05 12:29:05 by kaaltint          #+#    #+#             */
-/*   Updated: 2026/08/09 16:38:20 by kaaltint         ###   ########.fr       */
+/*   Updated: 2026/08/10 02:34:36 by kaaltint         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new);
 
 typedef struct s_list
 {
-	void	*context;
+	void			*content;
 	struct s_list	*next;
 }	t_list;
 
@@ -58,8 +58,14 @@ void 	ft_striteri(char *s, void (*f)(unsigned int, char*));
 void    ft_putnbr_fd(int n, int fd);
 char    **ft_split(char const *s, char c);
 char    *ft_strjoin(char const *s1, char const *s2);
+t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
-
-
+unsigned int	ft_lstsize(t_list *lst);
+t_list	*ft_lstlast(t_list *lst);
+void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
+void	ft_lstclear(t_list **lst, void (*del)(void *));
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif
