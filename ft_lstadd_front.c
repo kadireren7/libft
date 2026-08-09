@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kaaltint@student.42istanbul.com.tr         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/05 12:04:23 by kaaltint          #+#    #+#             */
-/*   Updated: 2026/08/09 14:29:52 by kaaltint         ###   ########.fr       */
+/*   Created: 2026/08/09 16:17:24 by kaaltint          #+#    #+#             */
+/*   Updated: 2026/08/09 16:41:46 by kaaltint         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	while (n--)
-		((unsigned char *)s)[n] = (unsigned char)c;
-	return (s);
+    
 }

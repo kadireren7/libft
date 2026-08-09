@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kaaltint@student.42istanbul.com.tr         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/05 12:20:24 by kaaltint          #+#    #+#             */
-/*   Updated: 2026/08/05 12:20:25 by kaaltint         ###   ########.fr       */
+/*   Created: 2026/08/09 14:34:01 by kaaltint          #+#    #+#             */
+/*   Updated: 2026/08/09 16:14:56 by kaaltint         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,10 @@
 char	*ft_strdup(const char *s)
 {
 	char	*copy;
-	size_t	len;
-	size_t	i;
 
-	len = ft_strlen(s);
-	copy = malloc(len + 1);
-	if (copy == NULL)
+	copy = malloc(ft_strlen(s) + 1);
+	if (!copy)
 		return (NULL);
-	i = 0;
-	while (i < len)
-	{
-		copy[i] = s[i];
-		i++;
-	}
-	copy[i] = '\0';
+	ft_strlcpy(copy, s, ft_strlen(s) + 1);
 	return (copy);
 }

@@ -6,7 +6,7 @@
 /*   By: kaaltint@student.42istanbul.com.tr         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/05 12:29:05 by kaaltint          #+#    #+#             */
-/*   Updated: 2026/08/07 17:51:28 by kaaltint         ###   ########.fr       */
+/*   Updated: 2026/08/09 16:38:20 by kaaltint         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,14 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdio.h>
+
+void	ft_lstadd_front(t_list **lst, t_list *new);
+
+typedef struct s_list
+{
+	void	*context;
+	struct s_list	*next;
+}	t_list;
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -40,13 +48,18 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 int		ft_atoi(const char *nptr);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *s);
+char	*ft_strtrim(char const *s1, char const *set);
 void	ft_putchar_fd(char c, int fd);
 void    ft_putstr_fd(char *s, int fd);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void    ft_putendl_fd(char *s, int fd);
 char    *ft_substr(char const *s, unsigned int start, size_t len);
+void 	ft_striteri(char *s, void (*f)(unsigned int, char*));
 void    ft_putnbr_fd(int n, int fd);
 char    **ft_split(char const *s, char c);
 char    *ft_strjoin(char const *s1, char const *s2);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+
 
 
 #endif
