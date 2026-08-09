@@ -5,21 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kaaltint@student.42istanbul.com.tr         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/05 14:41:53 by kaaltint          #+#    #+#             */
-/*   Updated: 2026/08/05 14:42:56 by kaaltint         ###   ########.fr       */
+/*   Created: 2026/08/10 02:46:17 by kaaltint          #+#    #+#             */
+/*   Updated: 2026/08/10 02:46:19 by kaaltint         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-	
-void    ft_putstr_fd(char *str, int fd)
+
+void	ft_putstr_fd(char *s, int fd)
 {
-	int i;
-	    
+	int	i;
+
 	i = 0;
-	while (str[i])
+	while (s[i])
 	{
-	    write(fd, &str[i], 1);
-	    i++;
+		write(fd, &s[i], 1);
+		i++;
 	}
 }

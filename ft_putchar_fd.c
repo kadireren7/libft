@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kaaltint@student.42istanbul.com.tr         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/05 14:36:20 by kaaltint          #+#    #+#             */
-/*   Updated: 2026/08/07 13:45:03 by kaaltint         ###   ########.fr       */
+/*   Created: 2026/08/10 02:48:37 by kaaltint          #+#    #+#             */
+/*   Updated: 2026/08/10 02:48:38 by kaaltint         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-    write (fd, &c, 1);
+	write(fd, &c, 1);
 }
