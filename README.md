@@ -41,6 +41,12 @@ Projeyi yeniden derlemek için:
 make re
 ```
 
+## Kütüphane İçeriği
+
+Kütüphane; standart libc fonksiyonlarının yeniden implementasyonlarını,
+string ve bellek işlemleri için ek yardımcı fonksiyonları ve tek yönlü
+linked list işlemleri için gerekli fonksiyonları içerir.
+
 ## Resources
 
 Projeyi geliştirirken kullanılan kaynaklar:
