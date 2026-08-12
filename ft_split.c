@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kaaltint@student.42istanbul.com.tr         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/10 02:47:39 by kaaltint          #+#    #+#             */
-/*   Updated: 2026/08/10 02:47:49 by kaaltint         ###   ########.fr       */
+/*   Created: 2026/08/12 14:16:19 by kaaltint          #+#    #+#             */
+/*   Updated: 2026/08/12 14:16:25 by kaaltint         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,16 +50,15 @@ static char	*ft_create_word(char const *s, size_t start, size_t end)
 	return (word);
 }
 
-static void	ft_delete_words(char **split, size_t count)
+static int	ft_delete_words(char **split, size_t count)
 {
-	if (!split)
-		return ;
 	while (count > 0)
 	{
 		count--;
 		free(split[count]);
 	}
 	free(split);
+	return (0);
 }
 
 static int	ft_put_words(char **split, char const *s, char c)
@@ -81,7 +80,7 @@ static int	ft_put_words(char **split, char const *s, char c)
 			i++;
 		split[word] = ft_create_word(s, start, i);
 		if (!split[word])
-			return (ft_delete_words(split, word), 0);
+			return (ft_delete_words(split, word));
 		word++;
 	}
 	split[word] = NULL;

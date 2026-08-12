@@ -52,14 +52,8 @@ linked list işlemleri için gerekli fonksiyonları içerir.
 Projeyi geliştirirken kullanılan kaynaklar:
 
 - 42 Libft Subject
-- Linux Manual Pages  
-  https://man7.org/linux/man-pages/
-- cppreference C Documentation  
-  https://en.cppreference.com/w/c
-- GNU C Library Manual  
-  https://www.gnu.org/software/libc/manual/
-- The Open Group / POSIX Documentation  
-  https://pubs.opengroup.org/onlinepubs/
+  https://man7.org/linux/man-pages/man7/libc.7.html
+  https://www.geeksforgeeks.org/c/memset-c-example/
 
 Bu kaynaklar fonksiyonların davranışlarını, dönüş değerlerini, bellek
 yönetimini ve edge case durumlarını incelemek için kullanıldı.
